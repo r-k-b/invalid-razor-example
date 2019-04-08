@@ -1,7 +1,12 @@
-﻿@{
-    ViewBag.Title = "About";
+﻿<div   data-foo="@(42)"></div>
+<span  data-foo="@(42)"></span>
+<input data-foo="@(42)"></input>
+@helper foo()
+{
+    <div   data-foo="@(42)"></div>
+    <span  data-foo="@(42)"></span>
+    <input data-foo="@(42)"></input> /* Why is this line a syntax error? */
 }
-<h2>@ViewBag.Title.</h2>
-<h3>@ViewBag.Message</h3>
-
-<p>Use this area to provide additional information.</p>
+<div   data-foo="@(42)"></div>
+<span  data-foo="@(42)"></span>
+<input data-foo="@(42)"></input>
